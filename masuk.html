@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Halaman Login </title>
+        <link href="masuk.css" rel="stylesheet">
+    </head>
+    <body>
+        <script type="text/javascript" src="validasiLogin.js"></script>
+        <div class="isi">
+            <h1> Login Akun </h1>
+            <form name="login" method="post" onsubmit="return validasi_input(this)" action="form.html">
+                <label> Username : </label><br>
+                <input type="text" name="username" id="username"><br><br>
+                <label> Password : </label><br>
+                <input type="password" onchange="checkPass()" id="password_1" name="password_1"><br><br>
+                <label> Confirm Password : </label><br>
+                <input type="password" onchange="checkPass()" id="password_2" name="password_2"><br><br>
+                <span id="pesan"></span>
+                <button type="submit" name="login_process" value="Log In" class="login"> Log In </button>
+            </form>
+        </div>
+    </body>
+</html>

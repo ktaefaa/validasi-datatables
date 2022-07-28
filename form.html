@@ -1,0 +1,112 @@
+<html>
+    <head>
+        <title> Formulir </title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+        <link href="form.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;1,500;1,700&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <script src="sweetalert.min.js"></script>
+        <form action="#">
+            <div>
+                <div class="data-header">
+                    <h1> Formulir Data Diri </h1>
+                    <p> Isi data diri dibawah ini dengan benar! </p><br>
+                    <p> Tanda * menandakan harus wajib diisi </p>
+                </div><br>
+    
+                <div class="data data-text">
+                    <label> Nama Lengkap* </label>
+                    <input type="text" placeholder="Masukkan Nama Lengkap" id="nama">
+                </div><br>
+    
+                <div class="data-text data">
+                    <label> NIM* </label>
+                    <input type="text" placeholder="Masukkan NIM" id="stambuk"> 
+                </div><br>
+    
+                <div class="data-text data">
+                    <label> Alamat </label>
+                    <input type="text" placeholder="Masukkan Alamat">
+                </div><br>
+    
+                <div class="data-date data">
+                    <label> Tanggal Lahir </label><br>
+                    <input type="date">
+                </div><br>
+    
+                <div class=" data">
+                    <label> Jenis Kelamin </label><br>
+                    <input type="radio" name="JenisKel" value="Pria" /> Pria
+                    <input type="radio" name="JenisKel" value="Wanita" /> Wanita
+                </div><br>
+    
+                <div class="data-selected data">
+                    <label> Fakultas </label><br>
+                    <select name="Fakultas">
+                        <option value="" selected="selected">---Pilih Fakultas---</option>
+                        <option value="Teknik">Teknik</option>
+                        <option value="MIPA">MIPA</option>
+                        <option value="ek">Ekonomi</option>
+                        <option value="hk">Hukum</option>
+                    </select>
+                </div><br>
+    
+                <div class="data-selected data">
+                    <label> Jurusan </label><br>
+                    <select name="Jurusan">
+                        <option value="" selected="selected">---Pilih Jurusan---</option>
+                        <option value="ti">Teknik Informasi</option>
+                        <option value="si">Teknik Mesin</option>
+                        <option value="si">Teknik Sipil</option>
+                        <option value="si">Teknik Geologi</option>
+                    </select>
+                </div><br>
+    
+                <div class="data-selected data">
+                    <label> Prodi* </label><br>
+                    <select name="Prodi">
+                        <option value="" selected="selected">---Pilih Prodi---</option>
+                        <option value="ti">Teknik Informatika</option>
+                        <option value="si">Sistem Informasi</option>
+                    </select>
+                </div><br>
+    
+                <div class="data-checkbox data">
+                    <label> Kelas : </label><br>
+                    <input type="checkbox" name="class" value="A" /> A <br>
+                    <input type="checkbox" name="class" value="B" /> B <br>
+                    <input type="checkbox" name="class" value="C" /> C
+                </div><br>
+                
+                <div class="data data-submit"> 
+                    <input type="submit" class="kirim" onclick="sweetalert()" value="Kirim"> </input>
+                    <input type="reset" name="Reset" /><br>
+                    <button class="button"> 
+                        <a href="dataset.html"> Lihat Data Tables! </a> 
+                    </button>
+                </div>
+            </div>
+        </form>
+
+        <script>
+            function sweetalert() {
+                var nama = document.querySelector('#nama').value
+                console.log(nama)
+
+                var nim = document.querySelector('#stambuk').value
+                console.log(stambuk)
+
+                if (nama != "" && nim != "") {
+                    swal("Berhasil", "Data sudah terisi", "success");
+                } else {
+                    swal("Data Anda kosong", "Setidaknya isilah data yang wajib diisi", "warning");
+                }
+            }
+        </script>
+    </body>
+
+</html>
